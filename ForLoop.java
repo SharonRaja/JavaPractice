@@ -41,6 +41,13 @@ public class ForLoop {
         //     System.out.println();
         // }
 
+/* 
+         1   
+        2 2  
+       3 3 3 
+      4 4 4 4
+     5 5 5 5 5
+*/
 
         // System.out.println("*******4*********\nPyramid pattern with a number that repeats char");
         // System.out.print("Input number of rows : ");
