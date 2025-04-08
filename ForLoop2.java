@@ -222,11 +222,66 @@ class ForLoop2 {
      
     */
 
-        // System.out.print("Enter the number of row :");
-        // int n = sc.nextInt();
-        // for(int i =0; i<=n*2;i++){
+    
+    System.out.print("Enter an odd number (for number of rows): ");
+    int N = sc.nextInt();
+    
+    // (Optional) Validate that N is odd; otherwise ask for an odd number.
+    if (N % 2 == 0) {
+        System.out.println("Please run the program again and enter an odd number.");
+        sc.close();
+        return;
+    }
+    
+    // The grid width is defined such that the pattern is centered.
+    int width = 2 * N - 1;
+    
+    
+    for (int i = 0; i < N; i++) {          // iterate through each row
+        for (int j = 0; j < width; j++) {    // iterate through each column in that row
+            
+            if (i % 2 == 0) { // even-numbered row
+                if (i == 0 || i == N - 1) {
+                    // For the very first and very last row,
+                    // print star only at the extreme columns.
+                    if (j == 0 || j == width - 1) {
+                        System.out.print("*");
+                    } else {
+                        System.out.print(" ");
+                    }
+                } else {
+                    // For inner even rows, print stars at:
+                    // left border, right border, at 2*i and at (width-1 - 2*i)
+                    if (j == 0 || j == width - 1 || j == 2 * i || j == (width - 1 - 2 * i)) {
+                        System.out.print("*");
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+            } else { // odd-numbered row
+                // Check if this is the middle row; for some odd N, the middle row index = N/2.
+                if (i == N / 2) { 
+                    // For our given pattern (for example, N=7 -> row 3),
+                    // print stars at columns: 2, center, and (width-1-2)
+                    if (j == 2 || j == (width - 1) / 2 || j == (width - 1 - 2)) {
+                        System.out.print("*");
+                    } else {
+                        System.out.print(" ");
+                    }
+                } else {
+                    // For all other odd rows, print stars at col 2 and (width-1-2)
+                    if (j == 2 || j == (width - 1 - 2)) {
+                        System.out.print("*");
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+            }
+        }
+        System.out.println();
+    }
+    
 
-        // }
 
 
     /* 11) fill square Pattern
@@ -570,20 +625,22 @@ class ForLoop2 {
          1 3 3 1
         1 4 6 4 1 
     */
+        
         // System.out.print("Enter the number of row :");
         // int n = sc.nextInt();
         // for (int row = 1; row <= n; row++) {
         //     for (int j = 0; j <= n - row; j++) {
         //         System.out.print(" ");
         //     }
- 
+
         //     int C = 1; 
         //     for (int i = 1; i <= row; i++) {
-        //         System.out.print(C + " "); 
+        //         System.out.print(" " +C); 
         //         C = C * (row - i) / i; 
         //     }
         //     System.out.println();
         // }
+
 
     /* 23) Hollow Triangle pattern
          *
@@ -595,39 +652,38 @@ class ForLoop2 {
          *  
     */
 
-        System.out.print("Enter the number of row :");
-        int n = sc.nextInt();
-        for (int i = 1; i <= n; i++) {
+        // System.out.print("Enter the number of row :");
+        // int n = sc.nextInt();
+        // for (int i = 1; i <= n; i++) {
 
-            for (int j = 1; j <= (i+1)/2; j++) {
-                if(i%2==0 ){
-                    System.out.print(" *"); 
-                }
-                else if(i%2!=0){
-                    System.out.print("* ");
-                }
-                else
-                    System.out.print(" ");
-            }
-            System.out.println();
-        }
-        System.out.println("----------");
-        for (int i = n; i >= 0; i--) {
+        //     for (int j = 1; j <= (i+1)/2; j++) {
+        //         if(i%2==0 ){
+        //             System.out.print(" *"); 
+        //         }
+        //         else if(i%2!=0){
+        //             System.out.print("* ");
+        //         }
+        //         else
+        //             System.out.print(" ");
+        //     }
+        //     System.out.println();
+        // }
 
-            for (int j = 0; j <= (i+1)/2; j++) {
-                if(i%2==0 ){
-                    System.out.print(" *");
-                    
-                }
-                else if(i%2!=0){
-                    System.out.print("* "); 
-                    
-                }
-                else
-                    System.out.print(" ");
-            }
-            System.out.println();
-        }
+
+        // for (int i = n-1; i >=0; i--) {
+
+        //     for (int j = 1; j <= (i+1)/2; j++) {
+        //         if(i%2==0 ){
+        //             System.out.print(" *"); 
+        //         }
+        //         else if(i%2!=0){
+        //             System.out.print("* ");
+        //         }
+        //         else
+        //             System.out.print(" ");
+        //     }
+        //     System.out.println();
+        // }
 
     }
 }
