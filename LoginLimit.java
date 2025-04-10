@@ -13,6 +13,7 @@ public class LoginLimit {
 
             if(acc_no == 2344 && pin == 3872){
                 System.out.println("Login Success" );
+                return;
             }else {
                 System.out.println("Account number or password does not match");
                 if(c>=1){
