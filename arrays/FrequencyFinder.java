@@ -1,3 +1,4 @@
+package arrays;
 public class FrequencyFinder {
     // public static void main(String[] args) {
         

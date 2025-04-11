@@ -1,3 +1,4 @@
+package functions;
 import java.util.Scanner;
 public class FunFactorial {
     public static int factorial(int n){

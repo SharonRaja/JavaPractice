@@ -1,3 +1,4 @@
+package arrays;
 public class CountOddEven {
 
     public static void main(String[] args) {

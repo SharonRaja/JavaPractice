@@ -1,3 +1,4 @@
+package arrays;
 public class ArrayMin {
     public static void main(String[] args) {
         int[] arr = {3,2,5,6,1};

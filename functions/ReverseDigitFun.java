@@ -1,3 +1,4 @@
+package functions;
 import java.util.Scanner;
 public class ReverseDigitFun {
     public static int reverseDigit(int n){

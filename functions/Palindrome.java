@@ -1,3 +1,4 @@
+package functions;
 import java.util.Scanner;
 public class Palindrome {
     public static boolean isPalindrome(String s){

@@ -1,3 +1,4 @@
+package arrays;
 public class MergeArray {
     public static void main(String[] args) {
         int[] arr1 = {3, 4, 2, 5, 3}, arr2 = {6, 5, 7, 2, 1};
