@@ -1,12 +1,16 @@
 package oops;
 
 import java.util.Scanner;
-
-class Book{
+// Consturcor over loading
+class Books{
     String title, author;
     float price;
 
-    public Book(String title, String author, float price){
+    public Books(){
+
+    }
+
+    public Books(String title, String author, float price){
         this.title = title;
         this.author = author;
         this.price = price;
@@ -27,8 +31,11 @@ public class Library {
         String author = sc.nextLine();
         System.out.print("Enter the price ");
         float price = sc.nextFloat();
-        Book b = new Book(title, author, price);
+        Books b = new Books(title, author, price);
         b.display();
+        System.out.println("Default consturctor book");
+        Books b2 = new Books();
+        b2.display();
         
     }
 }

@@ -1,12 +1,19 @@
 package oops;
 
 import java.util.Scanner;
-
+// Using constructor 
 public class BankAccount {
     static Scanner sc = new Scanner(System.in);
     String name;
     long accountNumber;
     double balance;
+
+    public BankAccount(){
+        System.out.print("Enter the account holder name : ");
+        this.name = sc.nextLine();
+        System.out.print("Enter the account number : ");
+        this.accountNumber = sc.nextLong();
+    }
 
     void deposit(){
         System.out.print("Enter the deposit amount : ");
@@ -35,10 +42,6 @@ public class BankAccount {
 
     public static void main(String[] args) {
         BankAccount b = new BankAccount();
-        System.out.print("Enter the account holder name : ");
-        b.name = b.sc.nextLine();
-        System.out.print("Enter the account number : ");
-        b.accountNumber = b.sc.nextLong();
         b.deposit();
         b.withdraw();
         System.out.println("Balance " + b.checkBalance());
