@@ -13,6 +13,8 @@ public class WriteCSV {
         System.out.println("Enter the input Id,Name,Age");
         while(sc.hasNextLine()) {
             String line = sc.nextLine();
+            if(line.toLowerCase().equals("exit"))
+                break;
             pw.println(line);
         }
         pw.close();
