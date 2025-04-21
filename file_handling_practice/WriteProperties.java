@@ -1,7 +1,8 @@
 package file_handling_practice;
 
-public class CsvPrintWriter {
+public class WriteProperties {
     public static void main(String[] args) {
         
     }
+    
 }
