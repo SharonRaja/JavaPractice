@@ -1,0 +1,6 @@
+Car number : TN73-000
+Owner : Politician
+Brand : Toyota
+Model : Innova
+Year : 2025
+Price : 45000.0
