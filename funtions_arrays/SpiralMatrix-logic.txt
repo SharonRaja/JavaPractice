@@ -1,0 +1,29 @@
+package funtions_arrays;
+
+
+while(rows <= rowe && cols <= cole){
+    for(int i = cols; i<=cole; i++ ){
+        mat.add(matrix[rows][i]);
+    }
+    rows++;
+
+    for(int j = rows; j<=rowe; j++ ){
+        mat.add(matrix[j][cole]);
+    }
+    cole--;
+
+    if (rows <= rowe) {
+        for (int i = cole; i >= cols; i--) {
+            mat.add(matrix[rowe][i]);
+        }
+        rowe--;
+    }
+
+    if (cols <= cole) {
+
+        for (int i = rowe; i >= rows; i--) {
+            mat.add(matrix[i][cols]);
+        }
+        cols++;
+    }
+}

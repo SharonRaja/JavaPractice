@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class SpiralMatrixInput {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n= 4;
+        int n= 5;
         int[][] m = new int[n][n];
         int rows = 0, rowe = n-1, cols = 0, cole = n-1;
         System.out.println("Enter the matrix ");
